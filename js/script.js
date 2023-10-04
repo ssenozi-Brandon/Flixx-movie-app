@@ -2,6 +2,7 @@ const global = {
   currentPage: window.location.pathname,
 };
 
+console.log(global.currentPage);
 // displaying popular movies
 async function displayPopularMovies(){
     const { results } = await fetchAPIData('movie/popular')
@@ -324,9 +325,6 @@ function init(){
     case '/shows.html':
       displayPopularShows();
       break;
-    case global.currentPage.includes('shows'):
-       displayPopularShows();
-       break;
     case '/movie-details.html':
       displayMovieDetails();
       break;
